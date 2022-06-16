@@ -8,11 +8,13 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pip_system_certs-{{ version }}.tar.gz
   sha256: fe9ea4e25f4c4977cf5b38d7fd7fe192fbfe7cd5e53edbf5b4b37ae3fadbd5d6
+  patches:
+    - fix_setup.patch
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
