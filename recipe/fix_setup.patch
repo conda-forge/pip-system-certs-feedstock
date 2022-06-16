@@ -1,0 +1,12 @@
+diff --git a/setup.py b/setup.py
+index 4dbbae4..38e1dc3 100644
+--- a/setup.py
++++ b/setup.py
+@@ -45,7 +45,6 @@ setup(
+     license='BSD',
+     url='https://gitlab.com/alelec/pip-system-certs',
+     packages=['pip_system_certs'],
+-    data_files=[(site_packages, ['pip_system_certs.pth'])],
+     install_requires=['wrapt>=1.10.4', 'setuptools_scm'],
+     zip_safe=False,
+     cmdclass={"install": InstallCheck, "develop": DevelopCheck},
