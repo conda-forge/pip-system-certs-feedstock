@@ -1,5 +1,5 @@
 {% set name = "pip-system-certs" %}
-{% set version = "3.1" %}
+{% set version = "3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pip_system_certs-{{ version }}.tar.gz
-  sha256: 8fd314e4af0061bdd242d4392da8ecef8df4a3192ef2a0e14145bca3fc62bfcc
+  sha256: bfd37b906d53980645f7f2b8b1fedcb1a29998f43bdf02755ce8f38ec7cfeda9
   patches:
     - fix_setup.patch
 
