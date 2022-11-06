@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pip_system_certs-{{ version }}.tar.gz
   sha256: db8e6a31388d9795ec9139957df1a89fa5274fb66164456fd091a5d3e94c350c
-  patches:
-    - fix_setup.patch
 
 build:
   noarch: python
@@ -20,7 +18,7 @@ requirements:
   host:
     - python >=3.4
     - pip
-    - setuptools-scm
+    - git-versioner
   run:
     - python >=3.4
     - wrapt >=1.10.4
