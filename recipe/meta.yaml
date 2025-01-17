@@ -19,6 +19,7 @@ requirements:
     - python {{ python_min }}
     - pip
     - git-versioner
+    - setuptools
   run:
     - python >={{ python_min }}
     - wrapt >=1.10.4
