@@ -1,5 +1,5 @@
 {% set name = "pip-system-certs" %}
-{% set version = "4.0" %}
+{% set version = "5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pip_system_certs-{{ version }}.tar.gz
-  sha256: db8e6a31388d9795ec9139957df1a89fa5274fb66164456fd091a5d3e94c350c
+  sha256: d424c016330cdbe8f1ecf4e2965680dbf09ef0db970cc06d3bbe35f6464a9b7e
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
