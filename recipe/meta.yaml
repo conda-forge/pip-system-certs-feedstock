@@ -24,6 +24,10 @@ requirements:
     - python >={{ python_min }}
     - wrapt >=1.10.4
 
+test:
+  requires:
+    - python {{ python_min }}
+
 about:
   home: https://gitlab.com/alelec/pip-system-certs
   summary: Live patches pip and requests to use system certs by default
