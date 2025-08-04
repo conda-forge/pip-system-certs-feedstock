@@ -1,5 +1,6 @@
 {% set name = "pip-system-certs" %}
-{% set version = "4.0" %}
+{% set version = "5.2" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pip_system_certs-{{ version }}.tar.gz
-  sha256: db8e6a31388d9795ec9139957df1a89fa5274fb66164456fd091a5d3e94c350c
+  sha256: 80b776b5cf17191bf99d313699b7fce2fdb84eb7bbb225fd134109a82706406f
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -23,6 +24,10 @@ requirements:
   run:
     - python >={{ python_min }}
     - wrapt >=1.10.4
+
+test:
+  requires:
+    - python {{ python_min }}
 
 about:
   home: https://gitlab.com/alelec/pip-system-certs
