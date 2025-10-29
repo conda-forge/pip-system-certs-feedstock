@@ -1,5 +1,5 @@
 {% set name = "pip-system-certs" %}
-{% set version = "5.2" %}
+{% set version = "5.3" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pip_system_certs-{{ version }}.tar.gz
-  sha256: 80b776b5cf17191bf99d313699b7fce2fdb84eb7bbb225fd134109a82706406f
+  sha256: 19c8bf9957bcce7d69c4dbc2d0b2ef13de1984d53f50a59012e6dbbad0af67c6
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
