@@ -1,0 +1,27 @@
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -1,5 +1,5 @@
+ [build-system]
+-requires = ["setuptools>=61.0", "wheel", "git-versioner"]
++requires = ["setuptools>=61.0", "wheel"]
+ build-backend = "setuptools.build_meta:__legacy__"
+
+ [project]
+@@ -26,7 +26,7 @@
+     "pip>=24.2"
+ ]
+ requires-python = ">=3.10"
+-dynamic = ["version"]
++version = "5.3"
+
+ [project.urls]
+ Homepage = "https://gitlab.com/alelec/pip-system-certs"
+@@ -37,8 +37,3 @@
+ zip-safe = false
+ packages = ["pip_system_certs"]
+
+-[tool.git-versioner]
+-gitlab = true
+-desc = true
+-snapshot = true
+-
